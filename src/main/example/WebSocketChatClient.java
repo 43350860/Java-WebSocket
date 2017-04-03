@@ -22,7 +22,6 @@ class WebSocketChatClient extends WebSocketClient {
     @Override
     public void onMessage( String message ) {
         System.out.println( "got: " + message );
-
     }
 
     @Override
