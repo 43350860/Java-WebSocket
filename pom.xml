@@ -16,9 +16,10 @@
   <scm>
     <url>https://github.com/TooTallNate/Java-WebSocket</url>
   </scm>
+
   <build>
-    <sourceDirectory>src\main\java</sourceDirectory>
-    <testSourceDirectory>test</testSourceDirectory>
+    <sourceDirectory>src/main/java</sourceDirectory>
+    <testSourceDirectory>src/test/java</testSourceDirectory>
     <resources>
       <resource>
         <directory>resources</directory>
@@ -36,6 +37,16 @@
   <repositories>
     <repository>
       <id>central</id>
+      <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+      <releases>
+        <enabled>true</enabled>
+      </releases>
+    </repository>
+    <repository>
+      <id>central2</id>
       <url>https://repo1.maven.org/maven2/</url>
       <snapshots>
         <enabled>false</enabled>
@@ -55,10 +66,24 @@
       </releases>
     </repository>
   </repositories>
-  <dependencyManagement>
-    <dependencies/>
+
+ <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>info.cukes</groupId>
+        <artifactId>cucumber-java</artifactId>
+        <version>1.2.5</version>
+      </dependency>
+    </dependencies>
   </dependencyManagement>
-  <dependencies/>
+
+  <dependencies>
+    <dependency>
+      <groupId>info.cukes</groupId>
+      <artifactId>cucumber-java</artifactId>
+    </dependency>
+  </dependencies>
+
   <developers>
     <developer>
       <name>Nathan Rajlich</name>
